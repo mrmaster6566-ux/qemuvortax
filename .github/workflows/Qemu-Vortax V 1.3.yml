@@ -151,13 +151,13 @@ jobs:
 
       - name: Configure VM specs
         run: |
-          DISK=60
+          DISK=256
           if [ "${{ github.event.repository.private }}" = "true" ]; then
             RAM=6
           else
             RAM=14
           fi
-          VCPUS=2
+          VCPUS=4
           echo "RAM=$RAM" >> $GITHUB_ENV
           echo "DISK=$DISK" >> $GITHUB_ENV
           echo "VCPUS=$VCPUS" >> $GITHUB_ENV
