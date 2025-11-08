@@ -151,7 +151,7 @@ jobs:
 
       - name: Configure VM specs
         run: |
-          DISK=256
+          DISK=128
           if [ "${{ github.event.repository.private }}" = "true" ]; then
             RAM=6
           else
